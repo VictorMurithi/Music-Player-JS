@@ -74,6 +74,7 @@ function setProgress(e){
 
     audio.currentTime = (clickX / width) * duration;
 }
+
 //Event Listeners
 playBtn.addEventListener('click', ()=>{
     const isPlaying = musicContainer.classList.contains('play');
@@ -92,3 +93,4 @@ nextBtn.addEventListener('click', nextSong)
 audio.addEventListener('timeupdate', updateProgress)
 
 progressContainer.addEventListener('click', setProgress)
+audio.addEventListener('ended', nextSong)
